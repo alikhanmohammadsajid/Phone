@@ -25,7 +25,7 @@ const Navbar = () => {
                             <li class="nav-item">
                                 <Link class="nav-link ms-5 text-dark" to="/contactUs">Contact Us</Link>
                             </li>
-                            <button type="button" className="nav-link ms-5 btn btn-outline-danger button text-white" to="/login"> <Link to="/login"> login</Link></button>
+                            <button type="button" className="nav-link ms-5 btn btn-outline-danger button text-white" to="/login"> <Link style={{textDecoration: "none"}} to="/login"> login</Link></button>
 
                         </ul>
 

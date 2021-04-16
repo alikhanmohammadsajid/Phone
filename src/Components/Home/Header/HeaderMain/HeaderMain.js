@@ -1,5 +1,5 @@
 import React from 'react';
-import mobile from '../../../../images/asus.jpg'
+import mobile from '../../../../images/asus.jpg' 
 const HeaderMain = () => {
     return (
         <main style={{
