@@ -7,15 +7,18 @@ import ServiceDetail from '../ServiceDetail/ServiceDetail';
 const serviceData = [
     {
         name: "PROCESSOR",
-        img: processor
+        img: processor,
+        price: "$400"
 
     }, {
         name: "DUAL SIM",
-        img: dualSim
+        img: dualSim,
+        price: "$300"
 
     }, {
         name: "CAMERA",
-        img: camera
+        img: camera,
+        price: "$500"
 
     }
 ]

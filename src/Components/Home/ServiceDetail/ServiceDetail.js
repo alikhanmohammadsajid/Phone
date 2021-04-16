@@ -6,8 +6,9 @@ const ServiceDetail = ({ service }) => {
 
             <img className="mt-3" style={{height: "100px"}} src={service.img} alt="" />
             <h5 className="mt-4 text-warning">{service.name}</h5>
+            <h6 className="text-success">{service.price}</h6>
             <p className="mt-3 align-center text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button className="btn btn-outline-dark">View</button>
+            <button className="btn btn-outline-dark">Book Now</button>
         </div>
     );
 };
