@@ -1,0 +1,9 @@
+
+.service{
+background-color: rgb(194, 177, 190);
+box-shadow: 5px 10px 5px 5px gray;
+border-radius: 50px 0 50px 0;
+}
+.service :hover{
+height: 40px;
+}
