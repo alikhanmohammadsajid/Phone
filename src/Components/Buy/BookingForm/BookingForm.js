@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
+
 
 const customStyles = {
     content: {
@@ -17,12 +19,27 @@ Modal.setAppElement('#root')
 
 const BookingForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
 
-
+    const [payment, setPayment] = useState()
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => {
-        
-        console.log(data)
-        closeModal()
+    const onSubmit = (data) => {
+
+        data.service = appointmentOn;
+        data.created = new Date();
+
+        fetch('http://localhost:5000/addMobile', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(success => {
+                if (success) {
+                    closeModal()
+                    alert('mobile created successfully')
+                }
+            })
+
+
     }
 
     return (
@@ -36,6 +53,8 @@ const BookingForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
 
                 <h2 className="text-center text-brand">{appointmentOn}</h2>
                 <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
+                    
+
                     <div className="form-group">
                         <input type="text" ref={register({ required: true })} name="name" placeholder="Your Name" className="form-control" />
                         {errors.name && <span className="text-danger">This field is required</span>}
@@ -49,32 +68,14 @@ const BookingForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
                         <input type="text" ref={register({ required: true })} name="email" placeholder="Email" className="form-control" />
                         {errors.email && <span className="text-danger">This field is required</span>}
                     </div>
-                    <div className="form-group row">
-                        <div className="col-4">
 
-                            <select className="form-control" name="gender" ref={register({ required: true })} >
-                                <option disabled={true} value="Not set" >Select Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Not set">Other</option>
-                            </select>
-                            {errors.gender && <span className="text-danger">This field is required</span>}
-
-                        </div>
-                        <div className="col-4">
-                            <input ref={register({ required: true })} className="form-control" name="age" placeholder="Your Age" type="number" />
-                            {errors.age && <span className="text-danger">This field is required</span>}
-                        </div>
-                        <div className="col-4">
-                            <input ref={register({ required: true })} className="form-control" name="weight" placeholder="Weight" type="number" />
-                            {errors.weight && <span className="text-danger">This field is required</span>}
-                        </div>
-                    </div>
 
                     <div className="form-group text-end">
                         <button type="submit" className="btn btn-outline-info">Send</button>
                     </div>
+
                 </form>
+
             </Modal>
         </div>
     );

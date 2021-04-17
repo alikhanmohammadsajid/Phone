@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import BookingForm from '../BookingForm/BookingForm';
 
 const BookingCard = ({ booking }) => {
@@ -24,6 +25,10 @@ const BookingCard = ({ booking }) => {
                     <p>
                         {booking.price}
                     </p>
+                    <Link to="/payment"><button className="btn btn-info text-uppercase">Pay Now</button></Link> 
+                    <br/>
+                    <small>Then Buy</small>
+                    <br/>
                     <button onClick={openModal} className="btn btn-warning text-uppercase">
                         Buy Now
                     </button>
