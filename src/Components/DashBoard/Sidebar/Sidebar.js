@@ -20,13 +20,13 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/Mobiles" className="text-white">
-                        <FontAwesomeIcon icon={faUsers} /> <span>Mobiles</span>
+                    <Link to="/addServices" className="text-white">
+                        <FontAwesomeIcon icon={faUsers} /> <span>Add Services</span>
                     </Link>
                 </li>
                 <li>
-                <Link to="/addDoctor" className="text-white" >
-                            <FontAwesomeIcon icon={faUserPlus} /> <span>review</span>
+                <Link to="/addReview" className="text-white" >
+                            <FontAwesomeIcon icon={faUserPlus} /> <span>Add review</span>
                         </Link>
                 </li>
                 

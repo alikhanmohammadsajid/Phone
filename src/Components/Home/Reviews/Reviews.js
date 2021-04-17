@@ -1,27 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Review from '../Review/Review';
-import samsung from '../../../images/samsung.jpg'
-import iphone from '../../../images/iphone.jpg'
-import onePlus from '../../../images/onePlus.jpg'
-const review = [
-    {
-        name: 'Samsung',
-        img: samsung,
-        description: ''
-    },
-    {
-        name: 'Iphone',
-        img: iphone,
-        description: ''
-    },
-    {
-        name: 'One Plus',
-        img: onePlus,
-        description: ''
-    }
-]
 
 const Reviews = () => {
+
+    const [review, setReview] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/reviews')
+            .then(res => res.json())
+            .then(data => {
+                setReview(data)
+                console.log(data)
+            })
+    }, [])
+
     return (
         <div className="row d-flex">
             {
