@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BookingListDetails from '../BookingListDetails/BookingListDetails';
-import Sidebar from '../Sidebar/Sidebar';
 
 const BookingList = () => {
     const [bookingList, setBookingList] = useState([])

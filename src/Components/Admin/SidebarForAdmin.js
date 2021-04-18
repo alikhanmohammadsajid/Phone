@@ -1,4 +1,5 @@
-import { faCalendar, faCog, faGripHorizontal, faHome, faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faPlusSquare } from '@fortawesome/free-regular-svg-icons';
+import { faCalendar, faClipboardList, faCog, faColumns, faGripHorizontal, faHome, faUsers, faUserShield } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -13,24 +14,24 @@ const SidebarForAdmin = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/dashboard" className="text-white">
-                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span> 
+                    <Link to="/dashboard/mobile" className="text-white">
+                        <FontAwesomeIcon icon={faColumns} /> <span>Dashboard</span> 
                     </Link>
                 </li>
                 <li>
                     <Link to="/bookingList" className="text-white">
-                        <FontAwesomeIcon icon={faCalendar} /> <span>BookingList</span> 
+                        <FontAwesomeIcon icon={faClipboardList} /> <span>BookingList</span> 
                     </Link>
                 </li>
                 
                 <li>
                     <Link to="/makeAdmin" className="text-white" >
-                      <FontAwesomeIcon icon={faGripHorizontal} /> <span>Make Admin</span>
+                      <FontAwesomeIcon icon={faUserShield} /> <span>Make Admin</span>
                     </Link>
                 </li>
                 <li>
                     <Link to="/addServices" className="text-white">
-                        <FontAwesomeIcon icon={faUsers} /> <span>Add Services</span>
+                        <FontAwesomeIcon icon={faPlusSquare} /> <span>Add Services</span>
                     </Link>
                 </li>
                 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css'
 const Navbar = () => {
     return (
         <div>
@@ -9,7 +10,7 @@ const Navbar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ms-auto">
+                        <ul className="navbar-nav ms-auto nav">
                             <li className="nav-item">
                                 <Link className="nav-link ms-5 text-dark" aria-current="page" to="/">Home</Link>
                             </li>

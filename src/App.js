@@ -15,6 +15,8 @@ import Payment from './Components/ProcessPayment/Payment';
 import ReviewInventory from './Components/Home/ReviewInventory/ReviewInventory';
 import AddServices from './Components/Home/AddServices/AddServices';
 import Admin from './Components/Admin/Admin';
+import Setting from './Components/Setting/Setting';
+import MakeAdmin from './Components/MakeAdmin/MakeAdmin';
 
 export const UserContext = createContext();
 
@@ -29,28 +31,31 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/dashboard/mobile">
+          <PrivateRoute path="/dashboard/mobile">
             <DashBoard></DashBoard>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/buy/:_id">
+          <PrivateRoute path="/buy/:_id">
             <Buy></Buy>
-          </Route>
-          <Route path="/bookingList">
+          </PrivateRoute>
+          <PrivateRoute path="/bookingList">
             <BookingList></BookingList>
-          </Route>
-          <Route path="/payment">
+          </PrivateRoute>
+          <PrivateRoute path="/payment">
             <Payment></Payment>
-          </Route>
+          </PrivateRoute>
           <Route path="/addReview">
             <ReviewInventory></ReviewInventory>
           </Route>
-          <Route path="/addServices">
+          <PrivateRoute path="/addServices">
             <AddServices></AddServices>
-          </Route>
-          <Route path="/admin">
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
             <Admin></Admin>
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
+            <MakeAdmin></MakeAdmin>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>

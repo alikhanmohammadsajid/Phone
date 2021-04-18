@@ -13,8 +13,8 @@ const Footer = () => {
         {name: "View" , link: "/view"},
     ]
     const ourAddress = [
-        {name: "bangladesh" , link: "//google.com/map"},
-        {name: "chittagong" , link: "//google.com/map"},
+        {name: "Bangladesh" , link: "//google.com/map"},
+        {name: "Chittagong" , link: "//google.com/map"},
        
     ]
     const oralHealth = [

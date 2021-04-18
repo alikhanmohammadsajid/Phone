@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
+import SidebarForAdmin from '../../Admin/SidebarForAdmin';
 import Sidebar from '../../DashBoard/Sidebar/Sidebar';
 
 const AddServices = () => {
@@ -21,12 +22,12 @@ const AddServices = () => {
 
         fetch(url, {
             method: 'POST',
-            headers: {'content-type': 'application/json'},
+            headers: { 'content-type': 'application/json' },
             body: JSON.stringify(serviceData)
         })
-        .then(res => {
-            console.log('server',res);
-        })
+            .then(res => {
+                console.log('server', res);
+            })
     };
 
     const handleImgUpload = event => {
@@ -45,21 +46,19 @@ const AddServices = () => {
     }
 
     const handleBlur = e => {
-        const newInfo = {...info}
+        const newInfo = { ...info }
         newInfo[e.target.name] = e.target.value
         setInfo(newInfo)
     }
 
     return (
         <div className="row">
-            <div className="col-md-2 mt-5 ms-5">
-                <Link to="./">
-                 <button className="btn btn-outline-warning" >Home</button>
-                 </Link>
+            <div className="col-md-2">
+                <SidebarForAdmin></SidebarForAdmin>
             </div>
             <div className="container col-md-8  mt-5 me-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input onBlur={handleBlur} className="ms-5 mt-5" name='email' type="email" placeholder="email" {...register("email")}/>
+                    <input onBlur={handleBlur} className="ms-5 mt-5" name='email' type="email" placeholder="email" {...register("email")} />
                     <input onBlur={handleBlur} className="ms-5 mt-5" name='name' type="text" placeholder="name" {...register("name")} />
                     <br />
                     <input className="ms-5 mt-5" name='price' type="text" placeholder="price" {...register("price")} />

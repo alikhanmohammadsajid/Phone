@@ -5,8 +5,7 @@ box-shadow: 5px 10px 5px 5px gray;
 border-radius: 50px 0 50px 0;
 }
 .service :hover{
-    width: 100px;
+    box-shadow: 10px 10px 10px;
+    font-family:'Times New Roman', Times, serif;
     
-    background-color: rgb(4, 14, 59);
-    transform: rotate(360deg);
 }
