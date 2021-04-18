@@ -7,7 +7,7 @@ const MakeAdmin = () => {
         const adminData = {
             email: data.email
         }
-        const url = `http://localhost:5000/admin`
+        const url = `https://glacial-atoll-37822.herokuapp.com/admin`
         console.log(adminData)
         fetch(url, {
             method: 'POST',
