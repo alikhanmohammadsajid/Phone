@@ -13,6 +13,7 @@ import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 import BookingList from './Components/DashBoard/BookingList/BookingList';
 import Payment from './Components/ProcessPayment/Payment';
 import ReviewInventory from './Components/Home/ReviewInventory/ReviewInventory';
+import AddServices from './Components/Home/AddServices/AddServices';
 
 export const UserContext = createContext();
 
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route path="/addReview">
             <ReviewInventory></ReviewInventory>
+          </Route>
+          <Route path="/addServices">
+            <AddServices></AddServices>
           </Route>
           <Route path="/login">
             <Login></Login>

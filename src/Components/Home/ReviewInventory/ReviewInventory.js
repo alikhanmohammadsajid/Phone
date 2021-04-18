@@ -47,21 +47,26 @@ const ReviewInventory = () => {
         <div className="row">
             <div className="col-md-4"><Sidebar></Sidebar></div>
             <div className="col-md-8">
+            <h5 className="text-uppercase text-brand mt-5 text-center">here you can give review</h5>
+
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input style={{
                         height: '50px',
-                        borderRadius: "10px",
-                        textAlign: 'center'
+                        borderRadius: "50px",
+                        textAlign: 'center',
+                        backgroundColor: '#61dafb'
+                       
                     }} className="mb-5 mt-5" name="name" type="text" placeholder="name" {...register("name")} />
                     <br />
 
                     <input style={{
-                        height: '130px',
-                        borderRadius: "10px",
-                        textAlign: 'center'
+                        height: '200px',
+                        borderRadius: "40px",
+                        textAlign: 'center',
+                        backgroundColor: '#61dafb'
                     }} className="me-5" name="description" type="text" placeholder="description" {...register("description")} />
 
-                    <input className="mb-5" type="file" onChange={handleImgUpload} />
+                    <input  className="mb-5" type="file" onChange={handleImgUpload} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <br />
 

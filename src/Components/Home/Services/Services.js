@@ -1,39 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Services.css'
-import processor from '../../../images/processor.jpg'
-import camera from '../../../images/camera.jpg'
-import dualSim from '../../../images/dualSim.jpg'
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
-const serviceData = [
-    {
-        name: "PROCESSOR",
-        img: processor,
-        price: "$400"
 
-    }, {
-        name: "DUAL SIM",
-        img: dualSim,
-        price: "$300"
 
-    }, {
-        name: "CAMERA",
-        img: camera,
-        price: "$500"
-
-    }
-]
 
 const Services = () => {
+
+    const [services, setServices] = useState([]) 
+
+    useEffect(() =>{
+        fetch('http://localhost:5000/services')
+        .then(res => res.json())
+        .then(data => setServices(data))
+    }, [])
+
     return (
-        <section className="services-container">
+        <section className="services-container mb-5">
             <div className="text-center mt-5">
                 <h5 style={{ color: '#336FCC' }} className="mt-3">FASTER PROCESSING WITH LESS POWER</h5>
                 <h2 className="mt-4">POSSIBILITIES. PERFORMANCE. POWER.</h2>
             </div>
             <div className="d-flex justify-content-center">
-                <div className="w75 row service  mb-5">
+                <div className="w75 row mb-5 service">
                     {
-                        serviceData.map(service => <ServiceDetail service={service}></ServiceDetail>)
+                        services.map(service => <ServiceDetail service={service}></ServiceDetail>)
                     }
                 </div>
             </div>

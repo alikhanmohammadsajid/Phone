@@ -12,7 +12,7 @@ const containerStyle = {
 const DashBoard = () => {
     return (
         <section>
-            <div style={{containerStyle}} className="container-fluid row">
+            <div style={{containerStyle}} className="row">
                 <div className="col-md-12">
                     <Sidebar></Sidebar>
                 </div>
