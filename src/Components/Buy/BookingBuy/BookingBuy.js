@@ -28,7 +28,7 @@ const BookingBuy = () => {
     const [bookingData, setBookingData] = useState([])
     const { _id } = useParams();
     useEffect(() => {
-        fetch(`https://glacial-atoll-37822.herokuapp.com//services`)
+        fetch(`https://glacial-atoll-37822.herokuapp.com/services`)
         .then(res => res.json())
         .then(data =>{
             setBookingData(data)

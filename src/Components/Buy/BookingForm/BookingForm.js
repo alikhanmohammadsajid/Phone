@@ -26,7 +26,7 @@ const BookingForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
         data.service = appointmentOn;
         data.created = new Date();
 
-        fetch('https://glacial-atoll-37822.herokuapp.com//addMobile', {
+        fetch('https://glacial-atoll-37822.herokuapp.com/addMobile', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
