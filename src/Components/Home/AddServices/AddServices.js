@@ -17,7 +17,7 @@ const AddServices = () => {
             price: data.price,
             imageURL: imageURL
         }
-        const url = `http://localhost:5000/addService`
+        const url = `https://glacial-atoll-37822.herokuapp.com//addService`
         // console.log(serviceData)
 
         fetch(url, {

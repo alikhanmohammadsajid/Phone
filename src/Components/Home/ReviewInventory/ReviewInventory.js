@@ -14,7 +14,7 @@ const ReviewInventory = () => {
             description: data.description,
             imageURL: imageURL
         }
-        const url = `http://localhost:5000/addReview`
+        const url = `https://glacial-atoll-37822.herokuapp.com//addReview`
         console.log(reviewData)
 
         fetch(url, {

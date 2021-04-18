@@ -7,7 +7,7 @@ import BookingListDetails from '../BookingListDetails/BookingListDetails';
 const BookingList = () => {
     const [bookingList, setBookingList] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/bookingList')
+        fetch('https://glacial-atoll-37822.herokuapp.com//bookingList')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
