@@ -5,9 +5,8 @@ box-shadow: 5px 10px 5px 5px gray;
 border-radius: 50px 0 50px 0;
 }
 .service :hover{
-    width: 150px;
+    width: 100px;
     
     background-color: rgb(4, 14, 59);
-    -ms-transform: rotate(20deg);
-    transform: rotate(20deg);
+    transform: rotate(360deg);
 }

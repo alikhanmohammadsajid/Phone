@@ -1,4 +1,7 @@
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import BookingListDetails from '../BookingListDetails/BookingListDetails';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -14,13 +17,12 @@ const BookingList = () => {
     }, [])
     return (
         <div>
-            <div className="col-md-4">
-<Sidebar></Sidebar>
-            </div>
-            <div className="col-md-8 container">
-            {
-                bookingList.map(booking => <BookingListDetails booking={booking}></BookingListDetails>)
-            }
+            
+            <div className="container">
+            
+                {
+                    bookingList.map(booking => <BookingListDetails booking={booking}></BookingListDetails>)
+                }
             </div>
 
         </div>

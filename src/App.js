@@ -14,6 +14,7 @@ import BookingList from './Components/DashBoard/BookingList/BookingList';
 import Payment from './Components/ProcessPayment/Payment';
 import ReviewInventory from './Components/Home/ReviewInventory/ReviewInventory';
 import AddServices from './Components/Home/AddServices/AddServices';
+import Admin from './Components/Admin/Admin';
 
 export const UserContext = createContext();
 
@@ -32,7 +33,7 @@ function App() {
             <DashBoard></DashBoard>
           </Route>
 
-          <Route path="/buy">
+          <Route path="/buy/:_id">
             <Buy></Buy>
           </Route>
           <Route path="/bookingList">
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/addServices">
             <AddServices></AddServices>
+          </Route>
+          <Route path="/admin">
+            <Admin></Admin>
           </Route>
           <Route path="/login">
             <Login></Login>
