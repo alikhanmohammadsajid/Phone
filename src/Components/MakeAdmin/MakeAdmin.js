@@ -7,7 +7,7 @@ const MakeAdmin = () => {
         const adminData = {
             email: data.email
         }
-        const url = `http://localhost:5000/addAdmin`
+        const url = `http://localhost:5000/admin`
         console.log(adminData)
         fetch(url, {
             method: 'POST',
