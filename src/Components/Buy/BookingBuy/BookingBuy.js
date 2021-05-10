@@ -38,7 +38,7 @@ const BookingBuy = () => {
     console.log('id found', _id);
     return (
         <section>
-            <h2 className="container text-brand text-center mb-5">Available Gadgets</h2>
+            <h2 className="container text-dark text-center mb-5">Available Gadgets</h2>
             <div style={{ width: "100%" }} className="row">
                 {
                     bookingData.map(booking => <BookingCard booking={booking} key={booking.id}></BookingCard>)

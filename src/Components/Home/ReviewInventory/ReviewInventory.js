@@ -56,7 +56,7 @@ const ReviewInventory = () => {
                         textAlign: 'center',
                         backgroundColor: '#61dafb'
                        
-                    }} className="mb-5 mt-5" name="name" type="text" placeholder="name" {...register("name")} />
+                    }} className="mb-5 mt-5" name="name" type="text" placeholder="name" ref={register} />
                     <br />
 
                     <input style={{
@@ -64,17 +64,15 @@ const ReviewInventory = () => {
                         borderRadius: "40px",
                         textAlign: 'center',
                         backgroundColor: '#61dafb'
-                    }} className="me-5" name="description" type="text" placeholder="description" {...register("description")} />
+                    }} className="me-5" name="description" type="text" placeholder="description" ref={register} />
 
-                    <input  className="mb-5" type="file" onChange={handleImgUpload} />
+                    <input  className="mb-5" name='exampleRequired' type="file" onChange={handleImgUpload} />
                     {errors.exampleRequired && <span>This field is required</span>}
                     <br />
 
                     <input className="btn btn-outline-danger" type="submit" />
                 </form>
             </div>
-
-
         </div>
     );
 };

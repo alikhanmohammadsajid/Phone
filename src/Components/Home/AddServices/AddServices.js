@@ -17,8 +17,8 @@ const AddServices = () => {
             price: data.price,
             imageURL: imageURL
         }
-        const url = `https://glacial-atoll-37822.herokuapp.com//addService`
-        // console.log(serviceData)
+        const url = 'https://glacial-atoll-37822.herokuapp.com/addService'
+        console.log(serviceData)
 
         fetch(url, {
             method: 'POST',
@@ -58,10 +58,10 @@ const AddServices = () => {
             </div>
             <div className="container col-md-8  mt-5 me-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input onBlur={handleBlur} className="ms-5 mt-5" name='email' type="email" placeholder="email" {...register("email")} />
-                    <input onBlur={handleBlur} className="ms-5 mt-5" name='name' type="text" placeholder="name" {...register("name")} />
+                    <input onBlur={handleBlur} className="ms-5 mt-5" name='email' type="email" placeholder="email" ref={register} />
+                    <input onBlur={handleBlur} className="ms-5 mt-5" name='name' type="text" placeholder="name" ref={register} />
                     <br />
-                    <input className="ms-5 mt-5" name='price' type="text" placeholder="price" {...register("price")} />
+                    <input className="ms-5 mt-5" name='price' type="text" placeholder="price" ref={register} />
                     {errors.exampleRequired && <span>This field is required</span>}
 
 

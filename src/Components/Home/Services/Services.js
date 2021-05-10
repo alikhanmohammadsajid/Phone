@@ -17,7 +17,7 @@ const Services = () => {
     return (
         <section className="services-container mb-5">
             <div className="text-center mt-5">
-                <h5 style={{ color: '#336FCC' }} className="mt-3">FASTER PROCESSING WITH LESS POWER</h5>
+                <h5 className="mt-3 text-dark">FASTER PROCESSING WITH LESS POWER</h5>
                 <h2 className="mt-4">POSSIBILITIES. PERFORMANCE. POWER.</h2>
             </div>
             <div className="d-flex justify-content-center">
