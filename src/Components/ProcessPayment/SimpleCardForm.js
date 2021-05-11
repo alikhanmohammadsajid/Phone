@@ -43,7 +43,7 @@ const SimpleCardForm = () => {
                 err && <p className="text-danger text-uppercase text-center mt-3">{err}</p>
             }
             {
-                success && <p className="text-success text-uppercase text-center mt-3">your payment has been successfully done .Now you have to click buy now page for buy this product.</p>
+                success && <p className="text-success text-uppercase text-center mt-3">your payment has been successfully done . Soon you will get your product. thank you.</p>
             }
             <div className="text-center mt-3">
                 <Link to="/">

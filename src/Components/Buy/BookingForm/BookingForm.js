@@ -35,7 +35,7 @@ const BookingForm = ({ modalIsOpen, closeModal, appointmentOn }) => {
             .then(success => {
                 if (success) {
                     closeModal()
-                    alert('mobile created successfully')
+                    alert('Registration successful now pay for buy the product.')
                 }
             })
 
