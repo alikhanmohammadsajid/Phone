@@ -13,9 +13,9 @@ const MakeAdmin = () => {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
-            },body: JSON.stringify(adminData)
+            }, body: JSON.stringify(adminData)
         })
-        .then(res => console.log('server site', res))
+            .then(res => console.log('server site', res))
     };
     return (
         <div className="row">
@@ -33,7 +33,7 @@ const MakeAdmin = () => {
                     {errors.exampleRequired && <span>This field is required</span>}
                     <br />
 
-                    <input className="ms-5 mt-5 btn btn-warning" type="submit" />
+                    <input className="ms-5 mt-5 btn btn-info" type="submit" />
                 </form>
             </div>
         </div>

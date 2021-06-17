@@ -6,12 +6,12 @@ import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
 const Services = () => {
 
-    const [services, setServices] = useState([]) 
+    const [services, setServices] = useState([])
 
-    useEffect(() =>{
+    useEffect(() => {
         fetch('https://glacial-atoll-37822.herokuapp.com/services')
-        .then(res => res.json())
-        .then(data => setServices(data))
+            .then(res => res.json())
+            .then(data => setServices(data))
     }, [])
 
     return (
@@ -20,8 +20,8 @@ const Services = () => {
                 <h5 className="mt-3 text-dark">FASTER PROCESSING WITH LESS POWER</h5>
                 <h2 className="mt-4">POSSIBILITIES. PERFORMANCE. POWER.</h2>
             </div>
-            <div className="d-flex justify-content-center">
-                <div className="w75 row mb-5 service">
+            <div className="d-flex container">
+                <div className="w75 row mb-5 service mx-auto">
                     {
                         services.map(service => <ServiceDetail service={service}></ServiceDetail>)
                     }

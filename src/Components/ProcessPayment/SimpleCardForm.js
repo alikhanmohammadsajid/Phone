@@ -37,7 +37,7 @@ const SimpleCardForm = () => {
                 <CardElement />
                 <button className="btn btn-outline-info" type="submit" disabled={!stripe}>
                     Buy
-                    </button>
+                </button>
             </form>
             {
                 err && <p className="text-danger text-uppercase text-center mt-3">{err}</p>
@@ -47,7 +47,7 @@ const SimpleCardForm = () => {
             }
             <div className="text-center mt-3">
                 <Link to="/">
-                    <button className="btn btn-outline-warning">
+                    <button className="btn btn-outline-info">
                         Go Home
                     </button>
                 </Link>

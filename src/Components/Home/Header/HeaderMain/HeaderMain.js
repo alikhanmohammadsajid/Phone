@@ -1,5 +1,5 @@
 import React from 'react';
-import mobile from '../../../../images/asus.jpg' 
+import mobile from '../../../../images/asus.jpg'
 const HeaderMain = () => {
     return (
         <main style={{
@@ -12,7 +12,7 @@ const HeaderMain = () => {
 
                 <p className="text-white lh-1 mt-3">Find smart phone stock images in HD and millions of other royalty-free stock photos, illustrations and vectors in the Shutter stock collection. Thousands of new ...</p>
 
-                <button type="button" className="btn btn-outline-dark text-white mt-4">About</button>
+                <button type="button" className="btn btn-info text-white mt-4">About</button>
             </div>
             <div className="col-md-6 ms-auto d-flex justify-content-center">
                 <img style={{
